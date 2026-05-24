@@ -56,7 +56,7 @@ The objectives of this project are:
 - Create interactive dashboards in Looker Studio
 
 ## Architecture Diagram
-![image](/image/Untitled Diagram.drawio.png "This is a sample image.")
+![image](https://github.com/jay5559/retail-sales-forecast-gcp/blob/main/image/data_diagram.png)
 
 
 ### Tech Stack
