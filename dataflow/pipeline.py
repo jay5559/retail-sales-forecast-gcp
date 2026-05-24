@@ -7,8 +7,8 @@ import logging
 # ---------------------------
 # CONFIG
 # ---------------------------
-PROJECT_ID = "retail-sales-forecast-490814"
-BUCKET = "jay-retail-data-pipeline"
+PROJECT_ID = "Your-Project-ID"
+BUCKET = "Your-Bucket-Name"
 INPUT_FILE = f"gs://{BUCKET}/raw/stores_sales_forecasting.csv"
 OUTPUT_TABLE = f"{PROJECT_ID}:retail.sales_data"
 
