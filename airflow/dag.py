@@ -26,7 +26,7 @@ default_args = {
 # ---------------------------------------------------------
 
 with DAG(
-    dag_id="retail_sales_forecast_pipeline",
+    dag_id="Your_dag_id",
     default_args=default_args,
     description="Retail Sales Forecasting Pipeline using GCS, Dataflow, BigQuery and BigQuery ML",
     schedule_interval="@daily",
@@ -52,14 +52,14 @@ with DAG(
     run_dataflow_pipeline = BashOperator(
         task_id="run_dataflow_pipeline",
         bash_command="""
-        python3 /home/airflow/gcs/dags/dataflow/beam_pipeline.py \
+        python3 /home/airflow/gcs/dags/dataflow/pipeline.py \
         --runner DataflowRunner \
-        --project retail-sales-forecast-490814 \
+        --project your-project-name \
         --region us-central1 \
-        --temp_location gs://retail-sales-bucket/temp \
-        --staging_location gs://retail-sales-bucket/staging \
-        --input gs://retail-sales-bucket/raw/retail_sales.csv \
-        --output_table retail-sales-forecast-490814:retail.sales_data
+        --temp_location gs://Your-Bucket_Name/temp \
+        --staging_location gs://Your-Bucket_Name/staging \
+        --input gs://Your-Bucket_Name/raw/retail_sales.csv \
+        --output_table your-project-id:retail.sales_data
         """,
     )
 
